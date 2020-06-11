@@ -1,0 +1,67 @@
+body
+{
+	background-image: linear-gradient(to right, black, gray);
+	overflow: hidden;
+	font-family: "Lucida Console", Monaco, monospace;
+}
+
+#logo
+{
+	width: 50px;
+	height: 50px;
+}
+
+#content .jumbotron 
+{
+	position: relative;
+	background-image: linear-gradient(to bottom, black,red);
+}
+
+#content .jumbotron .container 
+{
+	position: relative;
+	top: -30px;
+	height: 80vh;
+	overflow-y: scroll;
+	animation-name:fadeIn; 
+	animation-duration:4s;
+}
+
+.introtext
+{
+	color: #fff;
+	background-color: rgba(0,0,0,0.50);
+	margin: 0 auto;
+	width: 50%;
+	text-align: center;
+	padding: 1em;
+}
+
+.nav-item 
+{
+	padding: 0 20px;
+}
+
+.contentTitle
+{
+	font-family: Brush Script MT, Brush Script Std, cursive;
+	font-size: 50px; 
+	font-weight: bold; 
+	text-align: center;
+	margin-bottom: 30px;
+	animation-name:fadeIn; 
+	animation-duration:4s;
+}
+
+.contentP
+{
+	display: block;
+	float: left;
+	font-size: 20px;
+	margin: auto;
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
