@@ -7,7 +7,24 @@ body {
 #content .jumbotron {
 	position: relative;
 	height: 100vh;
-	background-image: linear-gradient(to bottom, black, blue);
+	/* background-image: linear-gradient(to bottom, black, blue); */
+	background-image: linear-gradient(to bottom, black, transparent);
+	animation-name: color-change;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in;
+}
+
+@keyframes color-change {
+	0% {
+		background-color: dodgerblue;
+	}
+	50% {
+		background-color: blue;
+	}
+	100% {
+		background-color: dodgerblue;
+	}
 }
 
 #content .jumbotron .container {
@@ -52,7 +69,7 @@ body {
         transform: translatex(100vw);
     }
     100% {
-        transform: translatex(-70vw) translatey(200vh);
+        transform: translatex(-10vw) translatey(200vh);
     }
 }
 
@@ -61,7 +78,7 @@ body {
         transform: translatex(90vw);
     }
     100% {
-        transform: translatex(-90vw) translatey(200vh);
+        transform: translatex(-20vw) translatey(200vh);
     }
 }
 
@@ -70,7 +87,7 @@ body {
         transform: translatex(80vw);
     }
     100% {
-        transform: translatex(-110vw) translatey(200vh);
+        transform: translatex(-30vw) translatey(200vh);
     }
 }
 
@@ -79,7 +96,7 @@ body {
         transform: translatex(70vw);
     }
     100% {
-        transform: translatex(-130vw) translatey(200vh);
+        transform: translatex(-40vw) translatey(200vh);
     }
 }
 
@@ -88,7 +105,7 @@ body {
         transform: translatex(60vw);
     }
     100% {
-        transform: translatex(-150vw) translatey(200vh);
+        transform: translatex(-50vw) translatey(200vh);
     }
 }
 
