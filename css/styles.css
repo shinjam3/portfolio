@@ -1,34 +1,191 @@
-body
-{
+body {
 	background-image: linear-gradient(to right, black, gray);
 	overflow: hidden;
 	font-family: "Lucida Console", Monaco, monospace;
 }
 
-#logo
-{
-	width: 50px;
-	height: 50px;
+#content .jumbotron {
+	position: relative;
+	height: 100vh;
+	background-image: linear-gradient(to bottom, black, blue);
 }
 
-#content .jumbotron 
-{
-	position: relative;
-	background-image: linear-gradient(to bottom, black,red);
-}
-
-#content .jumbotron .container 
-{
-	position: relative;
-	top: -30px;
-	height: 80vh;
+#content .jumbotron .container {
+	height: 75vh;
 	overflow-y: scroll;
 	animation-name:fadeIn; 
 	animation-duration:4s;
 }
 
-.introtext
-{
+/* HOME ANIMATIONS */
+.shooting-star {
+	display: inline;
+	position: absolute;
+	font-size: 75px;
+	top: -200px;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+}
+
+.shooting-star.star-1 {
+	animation-name: fall-1;
+}
+.shooting-star.star-2 {
+	animation-name: fall-2;
+	animation-delay: 4s;
+}
+.shooting-star.star-3 {
+	animation-name: fall-3;
+	animation-delay: 2s;
+}
+.shooting-star.star-4 {
+	animation-name: fall-4;
+	animation-delay: 1s;
+}
+.shooting-star.star-5 {
+	animation-name: fall-5;
+	animation-delay: 3s;
+}
+
+@keyframes fall-1 {
+	0% {
+        transform: translatex(100vw);
+    }
+    100% {
+        transform: translatex(-70vw) translatey(200vh);
+    }
+}
+
+@keyframes fall-2 {
+	0% {
+        transform: translatex(90vw);
+    }
+    100% {
+        transform: translatex(-90vw) translatey(200vh);
+    }
+}
+
+@keyframes fall-3 {
+	0% {
+        transform: translatex(80vw);
+    }
+    100% {
+        transform: translatex(-110vw) translatey(200vh);
+    }
+}
+
+@keyframes fall-4 {
+	0% {
+        transform: translatex(70vw);
+    }
+    100% {
+        transform: translatex(-130vw) translatey(200vh);
+    }
+}
+
+@keyframes fall-5 {
+	0% {
+        transform: translatex(60vw);
+    }
+    100% {
+        transform: translatex(-150vw) translatey(200vh);
+    }
+}
+
+@media only screen and (max-width: 1000px) { 
+	.shooting-star.star-1 {
+		animation-name: none;
+	}
+	.shooting-star.star-2 {
+		animation-name: none;
+	}
+	.shooting-star.star-3 {
+		animation-name: none;
+	}
+	.shooting-star.star-4 {
+		animation-name: none;
+	}
+	.shooting-star.star-5 {
+		animation-name: none;
+	}
+}
+/* END HOME ANIMATIONS */
+
+
+/* HOME STYLES */
+.home-img {
+	z-index: 2;
+	border-radius:50%; 
+	-moz-box-shadow: 0 0 5px #fff;
+	-webkit-box-shadow: 0 0 5px #fff;
+	box-shadow: 0px 0px 5px #fff;
+	width:300px; 
+	height:300px; 
+	display:block; 
+	margin:auto; 
+	margin-top:0;
+	margin-bottom: 20px;
+	animation-name:fadeIn; 
+	animation-duration:8s;
+}
+
+.home-h1 {
+	z-index: 2;
+	color: white;
+	text-shadow: 2px 2px 4px yellow;
+	font-family: serif; 
+	font-size: 40px; 
+	text-align: center; 
+	text-transform: uppercase; 
+	display: block; 
+	animation-name: fadeIn; 
+	animation-duration: 8s;
+}
+
+.home-p {
+	font-family: cursive; 
+	font-size: 20px; 
+	text-align: center; 
+	display: block;
+	color: white;
+	margin-top: 20px; 
+	animation-name: fadeIn; 
+	animation-duration: 8s;"
+}
+
+@media only screen and (max-width: 800px) { 
+	.home-h1 {
+		font-size: 30px;
+	}
+	
+	.home-img {
+		width: 250px;
+		height: 250px;
+	}
+	
+	::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		display: none;
+	}
+	 
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		display: none;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		display: none;
+	}
+}
+/* END HOME STYLES */
+
+
+.introtext {
 	color: #fff;
 	background-color: rgba(0,0,0,0.50);
 	margin: 0 auto;
@@ -37,13 +194,14 @@ body
 	padding: 1em;
 }
 
-.nav-item 
-{
+.nav-item {
+	font-family: serif;
 	padding: 0 20px;
+	font-style: italic;
+	font-size: 20px;
 }
 
-.contentTitle
-{
+.contentTitle {
 	font-family: Brush Script MT, Brush Script Std, cursive;
 	font-size: 50px; 
 	font-weight: bold; 
@@ -53,8 +211,7 @@ body
 	animation-duration:4s;
 }
 
-.contentP
-{
+.contentP {
 	display: block;
 	float: left;
 	font-size: 20px;
@@ -65,3 +222,28 @@ body
 	from { opacity: 0; }
 	to { opacity: 1; }
 }
+
+
+/* SCROLL BAR STYLES */
+/* width */
+::-webkit-scrollbar {
+	width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px white; 
+	border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: gray; 
+	border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: lightgray; 
+}
+/* END SCROLL BAR STYLES */
