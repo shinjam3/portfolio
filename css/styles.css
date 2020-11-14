@@ -110,6 +110,9 @@ body {
 }
 
 @media only screen and (max-width: 1000px) { 
+	.shooting-star {
+		display: none;
+	}
 	.shooting-star.star-1 {
 		animation-name: none;
 	}
