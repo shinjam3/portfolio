@@ -7,24 +7,16 @@ body {
 #content .jumbotron {
 	position: relative;
 	height: 100vh;
-	/* background-image: linear-gradient(to bottom, black, blue); */
 	background-image: linear-gradient(to bottom, black, transparent);
-	animation-name: color-change;
-	animation-duration: 4s;
-	animation-iteration-count: infinite;
-	animation-timing-function: ease-in;
+	animation: color-change 4s linear infinite;
 }
 
 @keyframes color-change {
-	0% {
-		background-color: dodgerblue;
-	}
-	50% {
-		background-color: blue;
-	}
-	100% {
-		background-color: dodgerblue;
-	}
+	0% {background-color: dodgerblue;}
+	25% {background-color: dodgerblue;}
+	50% {background-color: blue;}
+	75% {background-color: blue;}
+	100% {background-color: dodgerblue;}
 }
 
 #content .jumbotron .container {
