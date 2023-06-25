@@ -1,0 +1,161 @@
+#projects-section {
+  background-image: -webkit-gradient(linear, right top, left top, from(#ffd89b), to(#19547b));
+  background-image: -o-linear-gradient(right, #ffd89b, #19547b);
+  background-image: linear-gradient(to left, #ffd89b, #19547b);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects-container {
+  width: 100%;
+  height: 550px;
+  margin: 0;
+}
+
+.projects-h2 {
+	font-size: 60px;
+  font-weight: normal;
+  color: #000000;
+  margin: 0;
+  padding: 20px;
+}
+
+.projects-h3 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.projects-img {
+  margin: 20px auto;
+  width: 400px;
+  height: 420px;
+}
+
+.projects-app-link-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.projects-app-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 10px;
+}
+
+.projects-app-link-img {
+  width: 200px;
+}
+
+.apple {
+  width: 180px;
+}
+
+.app-icon {
+  margin: 20px auto 10px auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.carousel {
+  margin: 0px auto;
+  width: 90%;
+  height: 450px;
+  overflow: auto;
+  white-space: nowrap;
+  display: block;
+}
+
+.projects-card {
+  display: inline-block;
+  vertical-align: top;
+  width: 800px;
+  height: 400px;
+  margin: 0px 50px;
+  padding: 20px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#696969), to(#ffffff));
+  background-image: -o-linear-gradient(#696969, #ffffff);
+  background-image: linear-gradient(#696969, #ffffff);
+}
+
+@media only screen and (max-width: 1000px) {
+  .carousel {
+    height: 400px;
+  }
+  
+  .projects-card {
+    width: 500px;
+    height: 350px;
+  }
+  
+  .projects-app-link-img {
+    width: 160px;
+  }
+
+  .apple {
+    width: 140px;
+  }
+
+  .app-icon {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .carousel {
+    width: 95%;
+  }
+  
+  .projects-card {
+    width: 340px;
+  }
+  
+  .projects-h2 {
+    font-size: 40px;
+  }
+  
+  .projects-h3 {
+    font-size: 16px;
+  }
+  
+  iframe {
+    width: 300px;
+    height: 150px
+  }
+  
+  .projects-img {
+    margin: 20px auto;
+    width: 300px;
+    height: 320px;
+  }
+  
+  .projects-app-link-img {
+    width: 120px;
+  }
+
+  .apple {
+    width: 100px;
+  }
+
+  .app-icon {
+    width: 75px;
+    height: 75px;
+  }
+  
+  .projects-card > p {
+    font-size: 14px;
+  }
+  
+  .projects-card > ul > li {
+    font-size: 14px;
+  }
+}

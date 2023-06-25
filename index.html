@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./styles/default.css" />
+    <link rel="stylesheet" href="./styles/landing.css" />
+    <link rel="stylesheet" href="./styles/card.css" />
+    <link rel="stylesheet" href="./styles/projects.css" />
+    <link rel="stylesheet" href="./styles/about.css" />
+    <link rel="icon" href="./assets/logo.png" />
+    <title>James Shin</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="landing-container">
+        <img src="./assets/james.jpg" class="landing-img" />
+        <h1 class="landing-h1">I AM JAMES SHIN</h1>
+        <h2 class="landing-h2">THANK YOU FOR VISITING</h2>
+      </div>
+      <button onclick="scrollToAboutSection()" class="scroll-down-btn">
+        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+      </button>
+    </header>
+
+    <section id="about-section">
+      <div class="window">
+        <div class="window-title-container">
+          <div class="window-title-left">
+            <img class="window-folder-icon" src="./assets/folder.svg" />
+            <h3 class="window-title">About</h3>
+          </div>
+          <div class="window-title-actions">
+            <div class="window-title-action minimize">
+              <i class="fa fa-window-minimize" aria-hidden="true"></i>
+            </div>
+            <div class="window-title-action maximize">
+              <i class="fa fa-window-maximize" aria-hidden="true"></i>
+            </div>
+            <div class="window-title-action close">
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="window-actions">
+          <h4 class="window-action"><u>F</u>ile</h4>
+          <h4 class="window-action"><u>E</u>dit</h4>
+          <h4 class="window-action"><u>V</u>iew</h4>
+          <h4 class="window-action"><u>H</u>elp</h4>
+        </div>
+        <div class="window-body">
+          <button class="window-item" onclick="showCard('skills')">
+            <span class="window-item-icon"
+              ><i class="fa fa-television" aria-hidden="true"></i
+            ></span>
+            <p class="window-item-title">Skills</p>
+          </button>
+
+          <button class="window-item" onclick="showCard('experience')">
+            <span class="window-item-icon"
+              ><i class="fa fa-file-text-o" aria-hidden="true"></i
+            ></span>
+            <p class="window-item-title">Experience</p>
+          </button>
+
+          <button class="window-item" onclick="showCard('education')">
+            <span class="window-item-icon"
+              ><i class="fa fa-book" aria-hidden="true"></i
+            ></span>
+            <p class="window-item-title">Education</p>
+          </button>
+
+          <button class="window-item" onclick="showCard('contact')">
+            <span class="window-item-icon"
+              ><i class="fa fa-envelope-o" aria-hidden="true"></i
+            ></span>
+            <p class="window-item-title">Contact</p>
+          </button>
+        </div>
+      </div>
+      <button onclick="scrollToProjectsSection()" class="scroll-down-btn">
+        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+      </button>
+    </section>
+
+    <article id="skills-card-container" class="card-container">
+      <div class="card">
+        <button class="close-card" onclick="closeCard('skills')">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+        <h2 class="card-h2">Skills</h2>
+        <div class="card-body">
+          <div class="card-entry">
+            <h3 class="card-h3">Web Development</h3>
+            <p class="card-p">
+              <b>-</b> HTML, CSS, JavaScript, MySQL <br />
+              <b>-</b> MERN Stack (MongoDB, Express.js, React Hooks/Redux,
+              Node.js) <br />
+              <b>-</b> REST API <br />
+              <b>-</b> WebSocket API (Socket.IO) <br />
+              <b>-</b> Security/Encryption (JSON Web Tokens, bcrypt Password
+              Hashing, HTTP Cookies) <br />
+              <b>-</b> Unit and Integration Testing (Jest, Testing Library)
+              <br />
+              <b>-</b> End to End Testing (Cypress) <br />
+              <b>-</b> Version Control and Agile Development (Git, GitHub)
+              <br />
+              <b>-</b> Cloud Deployment and Services (Heroku, AWS S3) <br />
+              <b>-</b> UI Frameworks (Bootstrap, Material UI) <br />
+              <b>-</b> WordPress <br />
+            </p>
+          </div>
+          <div class="card-entry">
+            <h3 class="card-h3">Mobile App Development</h3>
+            <p class="card-p">
+              <b>-</b> React Native <br />
+              <b>-</b> Expo <br />
+              <b>-</b> WebView <br />
+            </p>
+          </div>
+          <div class="card-entry">
+            <h3 class="card-h3">UX Design</h3>
+            <p class="card-p">
+              <b>-</b> Wireframes <br />
+              <b>-</b> SEO <br />
+              <b>-</b> Google Analytics <br />
+              <b>-</b> Contextual Inquiry <br />
+              <b>-</b> Focus Groups <br />
+            </p>
+          </div>
+          <div class="card-entry">
+            <h3 class="card-h3">Microsoft Office</h3>
+            <p class="card-p">
+              <b>-</b> Word <br />
+              <b>-</b> PowerPoint <br />
+              <b>-</b> Excel <br />
+            </p>
+          </div>
+          <div class="card-entry">
+            <h3 class="card-h3">Adobe Creative Suite</h3>
+            <p class="card-p">
+              <b>-</b> Photoshop <br />
+              <b>-</b> Premiere Pro <br />
+              <b>-</b> Audition <br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article id="experience-card-container" class="card-container">
+      <div class="card">
+        <button class="close-card" onclick="closeCard('experience')">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+        <h2 class="card-h2">Experience</h2>
+        <div class="card-body">
+          <div class="card-entry">
+            <h3 class="card-h3">
+              Technical Standards & Safety Authority (TSSA)
+            </h3>
+            <h4 class="card-h4">January 2022 - Present</h4>
+            <p class="card-p">
+              <b>Associate, Workforce Planning (July 2022 - Present)</b> -
+              Created and managed schedules for elevating device inspectors
+              throughout Ontario, analyzed daily workflow and suggested
+              scheduling improvements (e.g. efficient traveling, inspections per
+              day), provided great customer service through phone and email
+              communications
+              <br />
+              <br />
+
+              <b>Associate, Authorizations (Jan 2022 - June 2022)</b> - Created
+              and updated client accounts in a CRM system, processed payments
+              and prepayments for clients' certification and exam fees, provided
+              great customer service to clients through email communications
+            </p>
+          </div>
+          <div class="card-entry">
+            <h3 class="card-h3">PureFacts Financial Solutions</h3>
+            <h4 class="card-h4">June 2021 - December 2021 (7 Months)</h4>
+            <p class="card-p">
+              <b>Developer Intern</b> - Assisting in front-end web development
+              of fintech software using React, working with API data
+              (Node.js/Express.js), writing unit and end-to-end tests (Jest,
+              Testing Library, Cypress)
+            </p>
+          </div>
+          <div class="card-entry">
+            <h3 class="card-h3">HomeSense</h3>
+            <h4 class="card-h4">August 2018 - February 2022 (3+ Years)</h4>
+            <p class="card-p">
+              <b>Salesfloor Associate</b> - Provided customer service by helping
+              customers find desired products, handling transactions, answering
+              customer phone calls, and carry-outs. Trained new hires and
+              received shipment in warehouse.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article id="education-card-container" class="card-container">
+      <div class="card">
+        <button class="close-card" onclick="closeCard('education')">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+        <h2 class="card-h2">Education</h2>
+        <div class="card-body">
+          <div class="card-entry">
+            <h3 class="card-h3">
+              University of Toronto Mississauga (2016-2020)
+            </h3>
+            <p class="card-p">
+              <b>Degree</b>: Honours Bachelor of Science (HBSc) <br />
+              <b>Major</b>: Communication, Culture, Information & Technology
+              <br />
+              <b>Minors</b>: Computer Science, Mathematics <br />
+            </p>
+          </div>
+          <div class="card-entry">
+            <h3 class="card-h3">Sheridan College (2018-2020)</h3>
+            <p class="card-p"><b>Certificate</b>: Digital Communications</p>
+          </div>
+          <div class="card-entry">
+            <h3 class="card-h3">CodeWithMosh (Programming Bootcamp)</h3>
+            <p class="card-p">
+              <b>Certificate</b>: Mastering React (2020) <br />
+              <b>Certificate</b>: The Complete Node.js Course (2020)
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article id="contact-card-container" class="card-container">
+      <div class="card">
+        <button class="close-card" onclick="closeCard('contact')">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+        <h2 class="card-h2">Contact</h2>
+        <div class="card-body">
+          <div class="card-entry">
+            <h3 class="card-h3">Email</h3>
+            <p class="card-p">
+              <a href="mailto:james-shin-1998@hotmail.com"
+                >james-shin-1998@hotmail.com</a
+              >
+            </p>
+          </div>
+          <div class="card-entry">
+            <h3 class="card-h3">LinkedIn</h3>
+            <p class="card-p">
+              <a href="https://www.linkedin.com/in/jamesshin98/" target="_blank"
+                >Click here to view my LinkedIn</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <section id="projects-section">
+      <div class="projects-container">
+        <h2 class="projects-h2">PROJECTS</h2>
+        <div class="carousel">
+          <div class="card projects-card">
+            <h3 class="projects-h3">
+              Real-time Messaging Web App: <em>Small Talk</em> (2023)
+            </h3>
+            <iframe
+              src="https://www.youtube.com/embed/Lid9BZy_-t0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <p>Front-end: React (Hooks & Context API), HTML, CSS, Socket.IO</p>
+            <p>
+              Back-end: MongoDB (Mongoose), Node.js (Express), Socket.IO, Jest,
+              JWT, bcrypt, HTTP cookies
+            </p>
+            <br />
+            <p>Key Features:</p>
+            <ul>
+              <li>
+                Register/sign in with secure accounts that have encrypted
+                passwords.
+              </li>
+              <li>Persistent login session using HTTP cookies.</li>
+              <li>Add and remove users from your friends list.</li>
+              <li>
+                Create private/authenticated group chats with multiple friends
+                to send messages.
+              </li>
+              <li>
+                Groups and messages are saved in a MongoDB database for future
+                logins.
+              </li>
+              <li>
+                Messages are sent/received in real-time using web sockets.
+              </li>
+            </ul>
+          </div>
+
+          <div class="card projects-card">
+            <h3 class="projects-h3">Mobile Game: <em>Dotswerve</em> (2021)</h3>
+            <img
+              alt="Screenshot of Dotswerve"
+              class="app-icon"
+              src="./assets/dotswerve.png"
+            />
+            <div class="projects-app-link-container">
+              <a
+                class="projects-app-link"
+                href="https://play.google.com/store/apps/details?id=com.shinjames.dotswerve&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+                target="_blank"
+              >
+                <img
+                  class="projects-app-link-img"
+                  alt="Get it on Google Play"
+                  src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                />
+              </a>
+              <!--<a class="projects-app-link" href="https://apps.apple.com/us/app/dotswerve/id1590580963" target="_blank">
+                <img class="projects-app-link-img apple" alt="Download on the App Store" src="./assets/apple_app_store.svg" />
+              </a>-->
+            </div>
+            <p>
+              Built with React Native, banner ads hosted by Google Admob
+              (removed)
+            </p>
+            <p>
+              Survive as long as you can without colliding with enemies. Train
+              your spatial awareness and pass some time with this awesome
+              arcade-style game!
+            </p>
+          </div>
+
+          <div class="card projects-card">
+            <h3 class="projects-h3">
+              <em>North Scarborough Endoscopy Clinic</em> (2021)
+            </h3>
+            <a href="https://nsec-toronto.ca/" target="_blank"
+              ><img
+                alt="North Scarborough Endoscopy Clinic"
+                class="projects-img"
+                src="./assets/nsec.png"
+            /></a>
+            <p>
+              Live website:
+              <a href="https://nsec-toronto.ca/" target="_blank"
+                >https://nsec-toronto.ca/</a
+              >
+            </p>
+            <p>
+              Freelance project - building a website for North Scarborough
+              Endoscopy Clinic (NSEC), based in Toronto, Ontario
+            </p>
+          </div>
+
+          <div class="card projects-card">
+            <h3 class="projects-h3">
+              Full Stack eCommerce Template: <em>Standard Apparel</em> (2020)
+            </h3>
+            <iframe
+              src="https://www.youtube.com/embed/kPmvP9DXnFQ"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <p>Front-end: HTML, CSS, React Redux</p>
+            <p>Back-end: MongoDB/MySQL, Node.js (Express), Jest, JWT, bcrypt</p>
+            <br />
+            <p>Key Features:</p>
+            <ul>
+              <li>
+                Create secure accounts with encrypted passwords that are stored
+                in an online database.
+              </li>
+              <li>
+                Browse through clothing catalog and add items to online shopping
+                cart.
+              </li>
+              <li>Save your online shopping cart for future logins.</li>
+              <li>Save shipping and payment information for future logins.</li>
+              <li>Simulate eCommerce purchases.</li>
+              <li>Users can delete existing accounts under settings.</li>
+            </ul>
+          </div>
+          <!--div class="card projects-card">
+            <h3 class="projects-h3">
+              Full Stack Web App: <em>Sticky Notes</em> (2020)
+            </h3>
+            <iframe
+              class="d-block w-75 mx-auto"
+              src="https://www.youtube.com/embed/wooJi8W2OjE"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <p>Front-end: HTML, CSS, React</p>
+            <p>Back-end: MySQL, Node.js (Express)</p>
+            <br />
+            <p>Key Features:</p>
+            <ul>
+              <li>Add a new sticky note and write content in it.</li>
+              <li>
+                Save new sticky notes or update existing sticky notes in a
+                database.
+              </li>
+              <li>Delete existing sticky notes in the database.</li>
+              <li>
+                Customize text color, sticky note color, or background color.
+              </li>
+            </ul>
+          </div>
+
+          <div class="card projects-card">
+            <h3 class="projects-h3">Java Desktop App: <em>Paint</em> (2017)</h3>
+            <img
+              alt="Paint App"
+              class="projects-img"
+              src="./assets/paint.png"
+            />
+            <p>
+              A desktop paint application created with Java. This was a
+              university group project that allows the user to draw on a blank
+              canvas and save their projects to a folder of their choice on
+              their computer.
+            </p>
+          </div>-->
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <script src="scripts.js"></script>
+</html>
